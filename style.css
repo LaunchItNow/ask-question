@@ -7,14 +7,12 @@ body {
   margin: 0;
 }
 
-#message {
-  display: flex;
-  justify-content: center;
+.container {
+  text-align: center;
 }
 
 #buttons {
-  display: flex;
-  justify-content: center;
+  margin-top: 80px;
 }
 
 button {
