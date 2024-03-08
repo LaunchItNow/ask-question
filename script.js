@@ -65,3 +65,37 @@ const moveNoButtonAway = () => {
 document
   .getElementById("noButton")
   .addEventListener("mouseenter", handleNoButtonHover);
+
+// Function to show heart emoji rain
+function showHeartRain() {
+  var heartEmoji = document.createElement("div");
+  heartEmoji.innerHTML = "❤️";
+  heartEmoji.style.position = "absolute";
+  heartEmoji.style.fontSize = "20px";
+  heartEmoji.style.color = "red";
+
+  var body = document.getElementsByTagName("body")[0];
+  body.appendChild(heartEmoji);
+
+  var x = Math.random() * window.innerWidth;
+  var y = -20; // Start from top
+  var speed = Math.random() * 2 + 1; // Random speed between 1 and 3
+
+  var animation = setInterval(frame, 15);
+
+  function frame() {
+    if (y >= window.innerHeight) {
+      clearInterval(animation);
+      body.removeChild(heartEmoji);
+    } else {
+      y += speed;
+      heartEmoji.style.top = y + "px";
+      heartEmoji.style.left = x + "px";
+    }
+  }
+
+  setTimeout(() => {
+    clearInterval(animation);
+    body.removeChild(heartEmoji);
+  }, 3000); // Remove hearts after 3 seconds
+}
