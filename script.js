@@ -1,31 +1,43 @@
-function saveMessage() {
-  var message = document.getElementById("messageInput").value.trim();
-  if (message === "") {
-    alert("Please enter a message.");
+// Function to save the question as a parameter in the URL
+const saveQuestion = () => {
+  var question = document.getElementById("messageInput").value.trim();
+  if (question === "") {
+    alert("Please enter a question.");
     return;
   }
 
   var url = new URL(window.location.href);
-  url.searchParams.set("param", message);
+  url.searchParams.set("param", question);
   window.history.replaceState({}, "", url);
 
-  // Remove the input field and display the message as an h1 element
-  document.getElementById("message").innerHTML = "<h1>" + message + "</h1>";
-  document.getElementById("buttons").style.display = "block";
-}
+  // Remove the input field and display the question as an h1 element
+  document.getElementById("question").innerHTML = "<h1>" + question + "</h1>";
 
-// Retrieve the message parameter from the URL
-function getMessageFromURL() {
+  // Remove the save button
+  document.getElementById("saveButton").style.display = "none";
+
+  // Bring back the yes and no buttons
+  document.getElementById("buttons").style.display = "block";
+};
+
+// Retrieve the question parameter from the URL
+const getQuestionFromURL = () => {
   var urlParams = new URLSearchParams(window.location.search);
-  var message = urlParams.get("param");
-  if (message) {
-    document.getElementById("messageInput").value = message;
+  var question = urlParams.get("param");
+  if (question) {
+    // Remove the input field and display the question as an h1 element
+    document.getElementById("question").innerHTML = "<h1>" + question + "</h1>";
+
+    // Remove the save button
+    document.getElementById("saveButton").style.display = "none";
+
+    // Bring back the yes and no buttons
     document.getElementById("buttons").style.display = "block";
   }
-}
+};
 
-// Call the function to retrieve message from the URL when the page loads
-getMessageFromURL();
+// Call the function to retrieve question from the URL when the page loads
+getQuestionFromURL();
 
 // Function to handle hovering over the "No" button
 const handleNoButtonHover = () => {

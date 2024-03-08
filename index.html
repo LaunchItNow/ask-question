@@ -8,9 +8,15 @@
   </head>
   <body>
     <div class="container">
-      <div id="message">
-        <input type="text" id="messageInput" placeholder="Enter your message" />
-        <button onclick="saveMessage()">Save</button>
+      <div id="question">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Enter your question"
+        />
+      </div>
+      <div id="saveButton">
+        <button onclick="saveQuestion()">Save</button>
       </div>
       <div id="buttons" style="display: none">
         <button id="yesButton" onclick="alert('That\'s great!')">Yes</button>
