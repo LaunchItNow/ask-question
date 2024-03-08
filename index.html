@@ -9,9 +9,10 @@
   <body>
     <div class="container">
       <div id="message">
-        <h2>D?</h2>
+        <input type="text" id="messageInput" placeholder="Enter your message" />
+        <button onclick="saveMessage()">Save</button>
       </div>
-      <div id="buttons">
+      <div id="buttons" style="display: none">
         <button id="yesButton" onclick="alert('That\'s great!')">Yes</button>
         <button id="noButton" onclick="moveNoButtonAway()">No</button>
       </div>
