@@ -67,7 +67,14 @@ document
   .addEventListener("mouseenter", handleNoButtonHover);
 
 // Function to show heart emoji rain
-function showHeartRain() {
+const showHeartRain = () => {
+  for (let i = 0; i < 10; i++) {
+    createHeartEmoji();
+  }
+};
+
+// Function to create a single heart emoji element
+const createHeartEmoji = () => {
   var heartEmoji = document.createElement("div");
   heartEmoji.innerHTML = "❤️";
   heartEmoji.style.position = "absolute";
@@ -97,5 +104,5 @@ function showHeartRain() {
   setTimeout(() => {
     clearInterval(animation);
     body.removeChild(heartEmoji);
-  }, 3000); // Remove hearts after 3 seconds
-}
+  }, 5000); // Remove hearts after 5 seconds
+};
