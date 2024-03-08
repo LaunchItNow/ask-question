@@ -1,7 +1,6 @@
-// Function to save the message as a parameter in the URL
 function saveMessage() {
-  var message = document.getElementById("messageInput").value;
-  if (message.trim() === "") {
+  var message = document.getElementById("messageInput").value.trim();
+  if (message === "") {
     alert("Please enter a message.");
     return;
   }
@@ -10,7 +9,8 @@ function saveMessage() {
   url.searchParams.set("param", message);
   window.history.replaceState({}, "", url);
 
-  // Show the buttons after saving the message
+  // Remove the input field and display the message as an h1 element
+  document.getElementById("message").innerHTML = "<h1>" + message + "</h1>";
   document.getElementById("buttons").style.display = "block";
 }
 
