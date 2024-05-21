@@ -5,7 +5,7 @@
 > When they Click Yes, it rains the heart emoji
 
 > [!IMPORTANT]
-> Check this video to learn more about how to use
+> Check [this video](https://www.instagram.com/p/C4ZYioAv5Nx/) to learn more about how to use
 
 ## Contributing
 
