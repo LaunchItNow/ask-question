@@ -3,11 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ask a question</title>
+    <title>Ask a Question | Always get YES for an answer</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="ask_question.png" type="image/x-icon" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Ask a question and get your friends to respond with YES. Share the link and get them involved. Perfect for fun, interaction, and planning a Netflix and Chill night."
+    />
+    <meta
+      name="keywords"
+      content="Ask a question and get your friends to always respond with YES. Share the link and get them involved. Perfect for fun, interaction, and planning a Netflix and Chill night."
+    />
+    <meta name="author" content="Your Name" />
+
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta
+      property="og:title"
+      content="Ask a Question - Make your friends to always respond with YES"
+    />
+    <meta
+      property="og:description"
+      content="Ask a question and get your friends to always respond with YES. Share the link and get them involved. Perfect for fun, interaction, and planning a Netflix and Chill night."
+    />
+    <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ask a Question - Make your friends to always respond with YES"
+    />
+    <meta
+      name="twitter:description"
+      content="Ask a question and get your friends to respond with YES. Share the link and get them involved. Perfect for fun, interaction, and planning a Netflix and Chill night."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourwebsite.com/twitter-image.jpg"
+    />
   </head>
   <body>
     <div class="container">
+      <div id="instructions">
+        <ul class="instructions">
+          <li>Type a question and save it</li>
+          <li>Copy the link and send it to your friend</li>
+          <li>They can't say no</li>
+          <li>Invite your gf to Netflix and Chill</li>
+        </ul>
+      </div>
       <div id="question">
         <input
           type="text"
@@ -23,7 +71,16 @@
         <button id="noButton" onclick="moveNoButtonAway()">No</button>
       </div>
     </div>
-
+    <div class="social-links">
+      <a href="https://zaap.bio/launch_it" target="_blank">Launch it</a>
+      <a
+        href="https://www.instagram.com/_launch_it_"
+        target="_blank"
+        class="instagram"
+        >Instagram</a
+      >
+      <a href="https://www.twitter.com/_launch_it_" target="_blank">Twitter</a>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

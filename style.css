@@ -65,3 +65,46 @@ button:hover {
 #noButton:hover {
   background-color: #c82333;
 }
+
+.instructions {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.social-links a:hover {
+  color: #0d8ddb; /* Darker blue on hover */
+}
+
+.social-links a.instagram {
+  color: #e4405f; /* Instagram gradient color */
+}
+
+.social-links a.instagram:hover {
+  color: #cc3461; /* Darker Instagram color on hover */
+}
