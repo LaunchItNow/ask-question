@@ -34,11 +34,11 @@ const getQuestionFromURL = () => {
     // Remove the save button
     document.getElementById("saveButton").style.display = "none";
 
-    // Bring back the yes and no buttons
-    document.getElementById("buttons").style.display = "block";
-
     // Remove the instructions
     document.getElementById("instructions").style.display = "none";
+
+    // Bring back the yes and no buttons
+    document.getElementById("buttons").style.display = "block";
   }
 };
 
